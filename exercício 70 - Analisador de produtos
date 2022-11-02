@@ -1,0 +1,26 @@
+print ('My code 70')
+total = totmil = menor = cont = 0
+barato = ' '
+while True:
+    produto = str(input('Qual o nome do produto?'))
+    preço = float(input('Qual o preço? R$ '))
+    cont += 1
+    total += preço
+    if preço > 1000:
+        totmil += 1
+    if cont == 1:
+        menor = preço
+        barato = produto
+    else:
+        if preço < menor:
+            menor = preço
+            barato = produto
+    resp = ' '
+    while resp not in 'SN':
+        resp = str(input('Quer continuar? [S/N]' )).strip().upper()
+    if resp == 'N':
+        break
+print (f'O total da compra R$ {total:.2f}!')
+print (f'Temos {totmil} produtos que custam mais que R$ 1000,00!')
+print (f'O produto mais barato é(o) {barato} que custa R$ {menor:.2f}')
+print('FIM DO PROGRAMA!')
