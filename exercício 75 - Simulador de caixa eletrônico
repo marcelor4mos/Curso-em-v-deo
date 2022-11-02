@@ -25,3 +25,42 @@ while True:
 print ( '=' * 35)
 print ('Volte sempre!')
 print ( '=' * 35)
+
+Mehorado C...
+from time import sleep
+print('-' * 40)
+print(f'{"MRS BANK.":^40}')
+print(f'{"Caixa Eletrônico":^40}')
+print('-' * 40)
+while True:
+    valor = int(input('Qual o valor a ser sacado: R$'))
+    cont1 = cont10 = cont20 = cont50 = 0
+    while valor > 49:
+        cont50 += 1
+        valor -= 50
+    while valor > 19:
+        cont20 += 1
+        valor -= 20
+    while valor > 9:
+        cont10 += 1
+        valor -= 10
+    while 0 < valor < 10:
+        cont1 += 1
+        valor -= 1
+    print('Sacando...')
+    sleep(2)
+    if cont50 > 0:
+        print(f'{cont50} cédulas de R$50,00.')
+    if cont20 > 0:
+        print(f'{cont20} cédulas de R$20,00.')
+    if cont10 > 0:
+        print(f'{cont10} cédulas de R$10,00.')
+    if cont1 > 0:
+        print(f'{cont1} cédulas de R$1,00.')
+    resp = ' '
+    while resp not in 'NS':
+        resp = str(input('Deseja sacar novamente [S/N]? ')).strip().upper()
+    if resp == 'N':
+        break
+print('\033[97;1mCome back always to MRS Bank! Have a nice day.\033[m')
+print('---FIM---')
