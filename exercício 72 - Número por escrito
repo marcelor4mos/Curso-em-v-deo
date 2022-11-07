@@ -10,3 +10,26 @@ while True:
     print ('Tente novamente!', end= ' ')
 print (f'Você digitou o número {cont[num]}!')
 
+# In English full #
+
+numer_is_full = "zero", "one", 'Two', "three", "four", "five", "Six", "Seven", "eight", "nine", "ten", "eleven",\
+                "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty "
+
+while True:
+    while True:
+        number = int(input('Enter a number between 0 to 20:'))
+        if 0 <= number <= 20:
+            break
+        elif number > 20:
+            print("Big Number!!")
+        else:
+            print("Small Number!!")
+    print(numer_is_full[number])
+    while True:
+        answer = str(input("Do you want to continue? (Type 's' for yes and 'n' for no)\n"
+                           "Option:")).lower().strip()
+        if answer == 's' or answer == 'n':
+            break
+    if answer == 'n':
+        break
+print('Progam Closed!!')
