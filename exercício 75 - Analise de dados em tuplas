@@ -1,0 +1,76 @@
+print ('My code 75 CC')
+valores = tuple(int(input('Digite valores '))for c in range(1, 5))
+print(f'O numero nove aparece {valores.count(9)} vezes')
+print(f'Valor 3 foi digitado pela primeira vez na {valores.index(3)+1}º posição' if 3 in valores else 'Não foi digitado valor 3')
+print('Valores pares digitados foram', end=' ')
+print({n for n in valores if n % 2 == 0}, end=' ')
+
+print ('My code 75 CC1')
+c=0
+par=tupla=()
+while c<4:
+    x=int(input(f"{c+1}- Digite um valor: "))
+    tupla+=x,
+    c+=1
+    if x % 2 == 0:
+        par+=x,
+print(f"O número 9 apareceu {tupla.count(9)} vez(es)")
+print(f"O número 3 apreceu primeiro na posição {tupla.index(3)+1}")
+print(f"Os números pares foram: {par}")
+
+print ('My code 75 CC3')
+num = tuple(int(input(f'Digite o {c}° valor: ')) for c in range(1, 5)) #faz a pergunta 4x ja criando uma tupla e alterando a pergunta cada vez
+pares = []
+if 9 in num:
+    print(f'O numero 9 apareceu {num.count(9)} vezes.')
+else:
+    print('O numero 9 não aparece.')
+if 3 in num:
+    print(f'O primeiro 3 aparece na posição {num.index(3)+1}.')
+else:
+    print('O numero 3 não aparece.')
+for n in num:
+    if n % 2 == 0:
+        pares.append(n)
+if pares:
+    print(f'O(s) numero(s) par(es) foi (foram): {pares}.')
+else:
+    print('Não há numeros pares.')
+    
+    
+    print ('My code 75 CC4')
+print()
+numbers = ((int(input('Digite um número: '))),
+           (int(input('Digite outro número: '))),
+           (int(input('Digite o terceiro número: '))),
+           (int(input('Digite o último número:  '))))
+print(f'\n\033[1mOs números digitados foram: {numbers}\033[m')
+
+pares = 'Blank'
+for cont in range(0, 3+1):
+    #print(numbers[cont])
+    if (numbers[cont] % 2) == 0:
+        if pares == 'Blank':
+            pares = str(numbers[cont])
+        else:
+            pares = pares + ', ' + str(numbers[cont])
+if pares == "Blank":
+    print('Não foram digitados valores pares.'.rjust(40))
+else:
+    print(f'\033[1;40;7m Os números pares são: {pares} \033[m'.rjust(52))
+
+nrepeat = int(input('\n* Qual número deseja contar: '))
+qtdrepeat = numbers.count(nrepeat)
+if qtdrepeat == 0:
+    print(f'O número {nrepeat} não aparece na listagem.'.rjust(40))
+else:
+    print(f'\033[1;40;7m O número {nrepeat} apareceu {qtdrepeat} vez(es). \033[m'.rjust(52))
+
+nsearch = int(input('\n* Qual número deseja localizar: '))
+if nsearch not in numbers:
+    print(f'Número {nsearch} não localizado nenhuma posição.'.rjust(40))
+else:
+    print(f'\033[1;40;7m Número {nsearch} localizado na posição {numbers.index(nsearch)+1} \033[m'.rjust(52))
+
+print()
+print('Analisador encerrado. Volte sempre.'.center(40))
