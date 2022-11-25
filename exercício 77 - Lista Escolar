@@ -1,0 +1,20 @@
+print ('My code 76')
+listagem =('Lápis', 1.75,
+'Borracha', 2,
+'Caderno', 18.99,
+'Estojo', 12,
+'Corretivo', 5,
+'Canetas', 15, 
+'Apostilas', 300,
+'Lapiseira', 10,
+'Compasso', 12, 
+'Mochila', 100)
+print('-' * 40)
+print(f'{"LISTAGEM DE PREÇOS":^40}')
+print('-' * 40)
+for pos in range(0, len(listagem)):
+    if pos % 2 == 0:
+        print(f'{listagem[pos]:.<30}', end= ' ')
+    else:
+        print(f'R${listagem[pos]:>7.2f}')
+print('-' * 40)
