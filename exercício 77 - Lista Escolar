@@ -18,3 +18,23 @@ for pos in range(0, len(listagem)):
     else:
         print(f'R${listagem[pos]:>7.2f}')
 print('-' * 40)
+
+Way 2:
+print("="*50)
+print("{:^50}".format("LISTAGEM DE PREÇOS"))
+print("="*50)
+produtos = ('Lápis', 1.75,
+'Borracha', 2,
+'Caderno', 18.99,
+'Estojo', 12,
+'Corretivo', 5,
+'Canetas', 15, 
+'Apostilas', 300,
+'Lapiseira', 10,
+'Compasso', 12, 
+'Mochila', 100)
+
+for c in range(0, len(produtos), 2):
+    print(f"{produtos[c]:.<40}", f" R$ {produtos[c+1]:>7.2f}")
+
+print("="*50)
