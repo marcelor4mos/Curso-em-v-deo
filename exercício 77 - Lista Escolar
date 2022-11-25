@@ -38,3 +38,14 @@ for c in range(0, len(produtos), 2):
     print(f"{produtos[c]:.<40}", f" R$ {produtos[c+1]:>7.2f}")
 
 print("="*50)
+
+
+way 3:
+# fazendo o teste com tipagem
+for i in listagem:
+    if type(i) is str:
+        print(f'{i:.<32}', end='')
+    else:
+        print(f'R$ {i:>5.2f}')
+print('--'*20)
+
