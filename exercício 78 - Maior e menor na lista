@@ -1,0 +1,54 @@
+print ('My code 78')
+listanum = []
+maior = 0
+menor = 0
+for c in range (0 , 6):
+    listanum.append(int(input(f'Digite um valor para a posição {c}: ')))
+    if c == 0:
+        maior = menor = listanum[c]
+    else:
+        if listanum[c] > maior:
+            maior = listanum[c]
+        if listanum[c] < menor:
+            menor = listanum[c]
+print (f' Você digitou os valores {listanum}')
+print (f' O maior valor digitado foi {maior} nas posições', end= ' ')
+for i, v in enumerate(listanum):
+    if v == maior:
+        print (f'{i}...', end= ' ')
+print()
+print (f' O menor valor digitado foi {menor} nas posições', end= ' ')
+for i, v in enumerate(listanum):
+    if v == menor:
+        print (f'{i}...', end= ' ')
+print()
+
+cc
+# usando index com max e min
+a1 = []
+a2=a3= 1
+for b1 in range(1,6):
+ a1.append(int(input(f'Digite o {b1}¹ valor: ')))
+a2 += a1.index(max(a1))
+a3 += a1.index(min(a1))
+print(a1)
+print(f'O maior é \33[35m{max(a1)}\33[m',end=' ')
+print(f'na posição \33[35m{a2}\33[m')
+print(f'O menor é \33[35m{min(a1)}\33[m',end=' ')
+print(f'na posição \33[35m{a3}\33[m')
+
+3º Way:
+lista = []
+posicao_maior = []
+posicao_menor = []
+for p in range(0, 5):
+    val = int(input(f'Digite um valor na posição {p}: '))
+    lista.append(val)
+for posicao, valores in enumerate(lista):
+    if valores == max(lista):
+        posicao_maior.append(posicao)
+    if valores == min(lista):
+        posicao_menor.append(posicao)
+print(f'Você digitou os valores {lista}')
+print(f'O maior valor da lista é {max(lista)}, nas posições {posicao_maior}')
+print(f'O menor valor da lista é {min(lista)}, nas posições {posicao_menor}')
