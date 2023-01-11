@@ -1,0 +1,20 @@
+print ('My code 82')
+num = list()
+pares = list()
+impares = list()
+print('*' * 35)
+while True:
+    num.append(int(input('Digite um número: ')))
+    resp = str (input('Quer continuar? [S/N] '))
+    if resp in 'Nn':
+        break
+for i, v in enumerate(num):
+    if v % 2 == 0:
+        pares.append(v)
+    elif v % 2 == 1:
+        impares.append(v)
+print('*' * 35)
+print(f'A lista completa é {num}')
+print(f'A lista de pares é {pares}')
+print(f'A lista de ímpares é {impares}')
+
