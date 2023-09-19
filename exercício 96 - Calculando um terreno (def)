@@ -1,0 +1,12 @@
+print('My code 96')
+def área(larg, comp):
+    a= larg * comp
+    print(f'A área de um terreno {larg}x{comp} é de {a}m2.')
+    print('VX' * 20)
+
+# Programa principal
+print('Controle de Terrenos')
+print('VX' * 20)
+l = float(input('LARGURA (m): '))
+c = float(input('COMPRIMENTO (m): '))
+área(l,c)
